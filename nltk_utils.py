@@ -1,6 +1,13 @@
 import numpy as np
 import nltk
-nltk.download('punkt')
+import os
+
+# Add the path where nltk data is stored
+nltk.data.path.append(os.path.expanduser('~/nltk_data'))
+
+# Download punkt if not already present
+nltk.download('punkt', quiet=True)
+# nltk.download('punkt')
 
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
